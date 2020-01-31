@@ -28,7 +28,7 @@ def run(argv=None):
 
 
     data_from_source = (p
-                        | 'Read the source file' >> ReadFromText('/home/ross_carvalho/dataset.csv')
+                        | 'Read the source file' >> ReadFromText('gs://group-2-ross/dataset.csv')
                         | 'Clean the items' >> beam.ParDo(Transaction())
                         )
 
